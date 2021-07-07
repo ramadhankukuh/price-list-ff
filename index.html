@@ -1,62 +1,66 @@
 <!DOCTYPE html>
-<html>    
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>ramadhankukuh</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">           
-    </head>
-    <body>
-        <link rel="stylesheet" href="dist/style.css">  
-        
-        <!-- Logo -->
-        <img class="logo" src="img/logo.png" />
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-        <!-- Featured -->
-        <h2>WhatsApp</h2>
-        <a class="featured" href="https://wa.me/message/XCJXGFY2TEUQJ1">ORDER? KLIK DISINI</a>
+<div class="container mt-3">
+  <h2>Filterable Table</h2>
+  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@mail.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@greatstuff.com</td>
+      </tr>
+      <tr>
+        <td>Anja</td>
+        <td>Ravendale</td>
+        <td>a_r@test.com</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+</div>
 
-        <!-- Popular Content -->
-        <h2>FREE FIRE</h2>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 
-        <a href="">70 DM = Rp. 9.500
-        <a href="">100 DM = Rp. 13.500
-        <a href="">140 DM = Rp. 19.000
-        <a href="">210 DM = Rp. 28.500
-        <a href="">280 DM = Rp. 38.000
-        <a href="">355 DM = Rp. 48.000
-        <a href="">425 DM = Rp. 56.034
-        <a href="">500 DM = Rp. 68.000
-        <a href="">720 DM = Rp. 95.000
-        <a href="">860 DM = Rp. 112.068
-        <a href="">930 DM = Rp. 121.407
-        <a href="">1.000 DM = Rp. 140.934
-        <a href="">1.440 DM = Rp. 254.700
-        <a href="">2.000 DM = Rp. 441.480
-        <a href="">3.000 DM = Rp. 556.095
-        <a href="">4.000 DM = Rp. 649.485
-        <a href="">7.290 DM = Rp. 933.900
-        <a href="">Member Mingguan = Rp. 28.300
-        <a href="">Member Bulanan = Rp. 113.200</a>
-
-        <!-- Channels -->
-        <h2>Follow Me On</h2>
-
-        <div class="channels">
-            <a href="https://instagram.com/ramadhankukuh">Instagram</a>
-            <a href="https://youtube.com/c/KukuhRamadhann">YouTube</a>
-            <a href="https://github.com/ramadhankukuh">GitHub</a>
-        </div>
-        
-    </body>
+</body>
 </html>
-            
-            <!DOCTYPE html>
-<html>
-  <body>
-    <audio autoplay="true" src="audio.mp3">
-	  Update your browser. Your browser does not support HTML audio
-	</audio> 
-  </body>
-</html>
-
